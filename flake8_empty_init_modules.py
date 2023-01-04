@@ -36,7 +36,7 @@ class _EIM002Visitor(ast.NodeVisitor):
         return (
             isinstance(node, ast.Assign)
             and all(
-                target.id == '__all__'  # type: ignore[attr-defined]
+                isinstance(target, ast.Name) and target.id == '__all__'
                 for target in node.targets
             )
         )
