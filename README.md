@@ -25,7 +25,7 @@ following to your `setup.cfg`
 ```ini
 [flake8]
 ignore = EIM001
-extend-select = EIM002
+enable-extensions=EIM002
 ```
 
 ## rationale
